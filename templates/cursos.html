@@ -5,10 +5,19 @@
 </head>
 <body>
     <h1>Listado de Cursos</h1>
-    <ul>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nombre del Curso</th>
+            <th>Id Estudiantes Inscritos</th>
+        </tr>
         {% for curso in cursos %}
-            <li>{{ curso.id }}: {{ curso.nombre_curso }}</li>
+            <tr>
+                <td>{{ curso.Id }}</td>
+                <td>{{ curso.nombre_curso }}</td>
+                <td>{{ curso.id_estudiante }}</td>
+            </tr>
         {% endfor %}
-    </ul>
+    </table>
 </body>
 </html>

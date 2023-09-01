@@ -5,10 +5,22 @@
 </head>
 <body>
     <h1>Listado de Estudiantes</h1>
-    <ul>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+        </tr>
         {% for estudiante in estudiantes %}
-            <li>{{ estudiante.id }}: {{ estudiante.nombre }} {{ estudiante.apellido }} (Edad: {{ estudiante.edad }})</li>
+            <tr>
+                <td>{{ estudiante.Id }}</td>
+                <td>{{ estudiante.nombre }}</td>
+                <td>{{ estudiante.apellido }}</td>
+                <td>{{ estudiante.edad }}</td>
+            </tr>
         {% endfor %}
-    </ul>
+    </table>
 </body>
 </html>
+
